@@ -21,6 +21,7 @@ public class PersonController {
     @PostMapping
     @ResponseStatus(HttpStatus.CREATED)
     public Person create(@RequestBody Person person) {
+        person.setId(null);
         return service.create(person);
     }
 
